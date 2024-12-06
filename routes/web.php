@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
+
     return view('user.welcome');
 });
 
@@ -21,3 +22,6 @@ Route::get('/products', function () {
 Route::get('/dashboard', function () {
     return view('admind.dashboard');
 });
+//     return view('welcome');
+// });
+
