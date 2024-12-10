@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,9 +20,10 @@ Route::get('/products', function () {
     return view('user.products');
 });
 
+
+//admin
 Route::get('/dashboard', function () {
     return view('admind.dashboard');
 });
-//     return view('welcome');
-// });
-
+Route::resource('/categories', CategoryController::class);
+Route::resource('/products', \App\Http\Controllers\ProductController::class);
